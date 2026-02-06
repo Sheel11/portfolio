@@ -1,0 +1,177 @@
+/* Imports global variables automatically if they are in App.css or index.css */
+
+/* --- Tab Styling --- */
+.qualification__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--mb-2);
+    /* gap: 1rem; */
+    margin-right: 4rem
+}
+
+.qualification__button {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+    background: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.qualification__button:hover {
+    color: var(--title-color-dark);
+}
+
+.qualification__active {
+    color: var(--title-color-dark);
+    font-weight: var(--font-semi-bold);
+    border: 1px solid var(--text-color);
+    /* Outline style for active tab */
+    background-color: var(--container-color);
+}
+
+.qualification__icon {
+    font-size: 1.2rem;
+    margin-right: var(--mb-0-5);
+}
+
+/* --- Content Container --- */
+.qualification__container {
+    max-width: 800px;
+    /* Limits width for better readability */
+    margin: 0 auto;
+}
+
+.qualification__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- Experience Cards --- */
+.qualification__card {
+    background-color: var(--container-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow for depth */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: .3s;
+}
+
+.qualification__card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.qualification__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--mb-1);
+}
+
+.qualification__icon-box {
+    font-size: 1.5rem;
+    color: var(--title-color);
+}
+
+.qualification__date {
+    font-size: var(--smaller-font-size);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    background-color: var(--body-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.qualification__card-title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-25);
+    color: var(--title-color);
+}
+
+.qualification__card-subtitle {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    margin-bottom: var(--mb-1);
+    font-weight: var(--font-medium);
+}
+
+.qualification__card-desc {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* --- Skills Styling --- */
+.qualification__skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skills__card {
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.skills__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--mb-0-5);
+}
+
+.skills__name {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+    font-size: var(--normal-font-size);
+}
+
+.skills__number {
+    color: var(--text-color);
+    font-size: var(--small-font-size);
+}
+
+.skills__bar {
+    background-color: var(--body-color);
+    height: 8px;
+    border-radius: 0.25rem;
+    width: 100%;
+}
+
+.skills__percentage {
+    height: 8px;
+    border-radius: 0.25rem;
+    display: block;
+    background-color: var(--title-color);
+    /* Uses the dark theme color */
+}
+
+/* --- Mobile Responsiveness --- */
+@media screen and (max-width: 576px) {
+    .qualification__tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .qualification__button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .qualification__content,
+    .qualification__skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
