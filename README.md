@@ -13,6 +13,3 @@ GitHub activity and repository highlights
 
 Smooth scrolling and user-friendly layout
 
-Hosted with Vercel
-
-Designed to represent my journey as a developer and problem solver.
